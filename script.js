@@ -3,7 +3,7 @@ const alarm_button = document.getElementById("set_alarm");
 const stop_watch_button = document.getElementById("stop_watch");
 
 alarm_button.addEventListener("click", () => {
-    const input = prompt("Set time for alarm", "hh:mm:ss");
+    const input = prompt("Set time for alarm (format: hh:mm:ss)", "hh:mm:ss");
     localStorage.setItem("time", input);
 })
 
@@ -14,7 +14,7 @@ function showTime() {
     time.innerText = result;
     const res = localStorage.getItem("time");
      if(res == result) {
-        alert("Alarm has been triggered");
+        alert("Alarm has been triggered!!!!!!");
     }
 }
 
